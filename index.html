@@ -2,169 +2,192 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Robotics Scientist | Portfolio</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0d1117;
-      color: #e6edf3;
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
     }
 
-    header {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(to bottom, #111827, #0d1117);
-    }
-
-    header img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      border: 3px solid #3b82f6;
-      margin-bottom: 15px;
-    }
-
-    h1 {
-      font-size: 36px;
-      margin: 10px 0;
-      color: #3b82f6;
-    }
-
-    h2 {
-      color: #3b82f6;
-      margin-top: 40px;
-      margin-bottom: 12px;
-      font-size: 26px;
-      border-left: 4px solid #3b82f6;
-      padding-left: 10px;
-    }
-
-    p, li {
-      font-size: 17px;
-    }
-
-    .container {
-      max-width: 900px;
+    /* LAYOUT */
+    .wrapper {
+      display: flex;
+      max-width: 1100px;
       margin: auto;
       padding: 20px;
     }
 
-    .section {
-      margin-bottom: 50px;
-      padding-bottom: 30px;
-      border-bottom: 1px solid #1f2937;
+    .sidebar {
+      width: 260px;
+      padding-right: 40px;
+      border-right: 1px solid #ddd;
+      height: 100vh;
+      position: sticky;
+      top: 0;
     }
 
-    .project-card {
-      padding: 15px;
-      background: #1f2937;
-      border-radius: 8px;
-      margin-bottom: 15px;
-      border-left: 4px solid #3b82f6;
+    .content {
+      flex: 1;
+      padding-left: 40px;
+      padding-top: 10px;
+    }
+
+    /* SIDEBAR */
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 15px auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin: 10px 0 5px 0;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 40px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
     }
 
     a {
-      color: #3b82f6;
+      color: #0070f3;
       text-decoration: none;
-      font-weight: bold;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      font-size: 14px;
-      color: #9ca3af;
+    a:hover {
+      text-decoration: underline;
     }
+
+    p, li {
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .contact p {
+      margin: 4px 0;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 900px) {
+      .wrapper {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+      }
+      .content {
+        padding-left: 0;
+      }
+    }
+
   </style>
 </head>
 
 <body>
 
-<header>
-    <!-- Avatar của bạn (nếu chưa có thì xóa dòng img hoặc thay link ảnh) -->
-    <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Avatar">
+<div class="wrapper">
 
-    <h1>Nhà Khoa Học Robot</h1>
-    <p>Robotics Scientist • AI Researcher • Autonomous Systems</p>
-    <p>Chuyên nghiên cứu robot tự hành (AMR), SLAM, DRL, điều khiển thông minh & cảm biến.</p>
-</header>
+  <!-- SIDEBAR ====================================== -->
+  <div class="sidebar">
 
-<div class="container">
+    <!-- Avatar -->
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/2?v=4" alt="Avatar">
 
-  <!-- ABOUT -->
-  <section class="section">
-    <h2>Giới thiệu</h2>
+    <!-- Name + Title -->
+    <h1>Robotics Scientist</h1>
+    <p style="text-align:center;">Autonomous Systems & AI Research</p>
+    
+    <div class="contact">
+      <p><strong>Email:</strong> <a href="mailto:youremail@gmail.com">youremail@gmail.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/White-Pici">github.com/White-Pici</a></p>
+      <p><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/yourprofile</a></p>
+    </div>
+
+    <h3>Mục lục</h3>
+    <ul>
+      <li><a href="#about">Giới thiệu</a></li>
+      <li><a href="#research">Hướng nghiên cứu</a></li>
+      <li><a href="#projects">Dự án</a></li>
+      <li><a href="#pubs">Công bố khoa học</a></li>
+      <li><a href="#teaching">Giảng dạy</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+    </ul>
+
+  </div>
+
+  <!-- CONTENT ======================================= -->
+  <div class="content">
+
+    <!-- ABOUT -->
+    <h3 id="about">Giới thiệu</h3>
     <p>
-      Tôi là một nhà khoa học về robot với kinh nghiệm nghiên cứu và phát triển các hệ thống robot 
-      tự hành, điều hướng thông minh, học tăng cường sâu (DRL), xử lý cảm biến LiDAR, và các thuật toán 
-      nhận thức trong môi trường động. Công trình của tôi tập trung vào việc kết hợp AI với robot đời thực 
-      để tạo ra các hệ thống tự chủ có độ tin cậy cao.
+      Tôi là một nhà khoa học robot, tập trung nghiên cứu các hệ thống robot tự hành (AMR), 
+      điều hướng thông minh trong môi trường động, học tăng cường sâu (DRL), SLAM, cảm biến LiDAR 
+      và điều khiển chuyển động. Tôi làm việc với cả mô phỏng (Gazebo) và robot thực.
     </p>
-  </section>
 
-  <!-- RESEARCH INTERESTS -->
-  <section class="section">
-    <h2>Hướng nghiên cứu</h2>
+    <!-- RESEARCH -->
+    <h3 id="research">Hướng nghiên cứu</h3>
     <ul>
-      <li>Robotics & Autonomous Mobile Robots (AMR)</li>
-      <li>SLAM, Localization, Mapping</li>
+      <li>Autonomous Robots & Intelligent Navigation</li>
+      <li>SLAM, AMCL, Perception Systems</li>
       <li>Deep Reinforcement Learning (TD3, SAC, PPO)</li>
-      <li>Robot Perception – LiDAR, IMU, Sensor Fusion</li>
-      <li>Motion Planning & Intelligent Control</li>
-      <li>Human–Robot Interaction (HRI)</li>
+      <li>Sensor Fusion: LiDAR + IMU</li>
+      <li>Robot Motion Planning</li>
     </ul>
-  </section>
 
-  <!-- PROJECTS -->
-  <section class="section">
-    <h2>Dự án tiêu biểu</h2>
-
-    <div class="project-card">
-      <h3>⭐ Hệ thống điều hướng AMR trong môi trường động</h3>
-      <p>Phát triển thuật toán TD3 cho robot tự hành trong môi trường thật, không cần global planner.</p>
-    </div>
-
-    <div class="project-card">
-      <h3>⭐ Tích hợp SLAM + DRL cho robot 2 bánh thực tế</h3>
-      <p>
-        Kết hợp slam_toolbox, AMCL, move_base với thuật toán học tăng cường sâu để điều hướng thông minh.
-      </p>
-    </div>
-
-    <div class="project-card">
-      <h3>⭐ Hệ thống cảm nhận LiDAR X4 trên robot mini</h3>
-      <p>Phát triển thuật toán phân tích scan real-time & chọn local goal động.</p>
-    </div>
-  </section>
-
-  <!-- PUBLICATIONS -->
-  <section class="section">
-    <h2>Công bố khoa học</h2>
+    <!-- PROJECTS -->
+    <h3 id="projects">Dự án tiêu biểu</h3>
     <ul>
-      <li><strong>[2024]</strong> Deep Reinforcement Learning for AMR Navigation in Dynamic Environments.</li>
-      <li><strong>[2023]</strong> Improved SLAM Performance using Adaptive Sensor Fusion.</li>
-      <li><strong>[2022]</strong> Intelligent Obstacle Avoidance Based on LiDAR Perception.</li>
+      <li><strong>TD3-based Autonomous Navigation for AMR</strong> – điều hướng robot trong môi trường động không cần global planner.</li>
+      <li><strong>SLAM + DRL Integration</strong> – kết hợp slam_toolbox và TD3 trên robot thật.</li>
+      <li><strong>Local Goal Selector từ LiDAR</strong> – phân tích scan real-time và chọn local waypoint tối ưu.</li>
+      <li><strong>ROS Noetic AMR System</strong> – triển khai AMCL, move_base, mapping, teleop.</li>
     </ul>
-  </section>
 
-  <!-- CONTACT -->
-  <section class="section">
-    <h2>Liên hệ</h2>
-    <p>Email: <a href="mailto:youremail@gmail.com">youremail@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/White-Pici">github.com/White-Pici</a></p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
-  </section>
+    <!-- PUBLICATIONS -->
+    <h3 id="pubs">Công bố khoa học</h3>
+    <ul>
+      <li><strong>[2024]</strong> DRL-based Navigation in Dynamic Environments.</li>
+      <li><strong>[2023]</strong> Enhanced SLAM through Adaptive Sensor Fusion.</li>
+      <li><strong>[2022]</strong> Intelligent Obstacle Avoidance with LiDAR.</li>
+    </ul>
+
+    <!-- TEACHING -->
+    <h3 id="teaching">Giảng dạy</h3>
+    <ul>
+      <li>Robot Operating System (ROS)</li>
+      <li>Machine Learning trong Robot</li>
+      <li>Điều khiển Robot bằng Python/C++</li>
+      <li>Cảm biến và xử lý tín hiệu</li>
+    </ul>
+
+    <!-- CONTACT -->
+    <h3 id="contact">Liên hệ</h3>
+    <p>📧 Email: <a href="mailto:youremail@gmail.com">youremail@gmail.com</a></p>
+    <p>🌐 GitHub: <a href="https://github.com/White-Pici">github.com/White-Pici</a></p>
+    <p>🔗 LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+
+  </div>
 
 </div>
-
-<footer>
-  © 2025 — Robotics Scientist Portfolio
-</footer>
 
 </body>
 </html>
