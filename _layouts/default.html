@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/2?v=4" alt="Avatar">
+
+    <h1>Robotics Scientist</h1>
+    <p>Autonomous Systems & AI Research</p>
+
+    <div class="contact">
+      <p><strong>Email:</strong> <a href="mailto:youremail@gmail.com">youremail@gmail.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/White-Pici">github.com/White-Pici</a></p>
+      <p><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/yourprofile</a></p>
+    </div>
+
+    <h3>Mục lục</h3>
+    <ul>
+      {% for item in site.nav %}
+      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+    {{ content }}
+  </div>
+
+</div>
+
+</body>
+</html>
