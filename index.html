@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Robotics Scientist | Portfolio</title>
 
-  <!-- FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -15,15 +14,12 @@
       background-color: #f7f7f7;
       color: #333;
     }
-
-    /* LAYOUT */
     .wrapper {
       display: flex;
       max-width: 1100px;
       margin: auto;
       padding: 20px;
     }
-
     .sidebar {
       width: 260px;
       padding-right: 40px;
@@ -32,14 +28,11 @@
       position: sticky;
       top: 0;
     }
-
     .content {
       flex: 1;
       padding-left: 40px;
       padding-top: 10px;
     }
-
-    /* SIDEBAR */
     .avatar {
       width: 140px;
       height: 140px;
@@ -47,56 +40,12 @@
       display: block;
       margin: 0 auto 15px auto;
     }
-
-    h1 {
-      text-align: center;
-      font-size: 24px;
-      margin: 10px 0 5px 0;
-    }
-
-    h3 {
-      font-size: 18px;
-      margin-top: 40px;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
-
-    a {
-      color: #0070f3;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    p, li {
-      line-height: 1.7;
-      font-size: 16px;
-    }
-
-    .contact p {
-      margin: 4px 0;
-    }
-
-    /* RESPONSIVE */
-    @media(max-width: 900px) {
-      .wrapper {
-        flex-direction: column;
-      }
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        border-right: none;
-        border-bottom: 1px solid #ddd;
-        padding-bottom: 20px;
-      }
-      .content {
-        padding-left: 0;
-      }
-    }
-
+    h1 { text-align: center; font-size: 24px; margin: 10px 0 5px 0; }
+    h3 { font-size: 18px; margin-top: 40px; border-bottom: 2px solid #ddd; padding-bottom: 5px; }
+    a { color: #0070f3; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    p, li { line-height: 1.7; font-size: 16px; }
+    .contact p { margin: 4px 0; }
   </style>
 </head>
 
@@ -104,16 +53,12 @@
 
 <div class="wrapper">
 
-  <!-- SIDEBAR ====================================== -->
   <div class="sidebar">
-
-    <!-- Avatar -->
     <img class="avatar" src="https://avatars.githubusercontent.com/u/2?v=4" alt="Avatar">
 
-    <!-- Name + Title -->
     <h1>Robotics Scientist</h1>
     <p style="text-align:center;">Autonomous Systems & AI Research</p>
-    
+
     <div class="contact">
       <p><strong>Email:</strong> <a href="mailto:youremail@gmail.com">youremail@gmail.com</a></p>
       <p><strong>GitHub:</strong> <a href="https://github.com/White-Pici">github.com/White-Pici</a></p>
@@ -122,69 +67,18 @@
 
     <h3>Mục lục</h3>
     <ul>
-      <li><a href="#about">Giới thiệu</a></li>
-      <li><a href="#research">Hướng nghiên cứu</a></li>
-      <li><a href="#projects">Dự án</a></li>
-      <li><a href="#pubs">Công bố khoa học</a></li>
-      <li><a href="#teaching">Giảng dạy</a></li>
-      <li><a href="#contact">Liên hệ</a></li>
+      <li><a href="about.html">Giới thiệu</a></li>
+      <li><a href="research.html">Hướng nghiên cứu</a></li>
+      <li><a href="projects.html">Dự án</a></li>
+      <li><a href="pubs.html">Công bố khoa học</a></li>
+      <li><a href="teaching.html">Giảng dạy</a></li>
+      <li><a href="contact.html">Liên hệ</a></li>
     </ul>
-
   </div>
 
-  <!-- CONTENT ======================================= -->
   <div class="content">
-
-    <!-- ABOUT -->
-    <h3 id="about">Giới thiệu</h3>
-    <p>
-      Tôi là một nhà khoa học robot, tập trung nghiên cứu các hệ thống robot tự hành (AMR), 
-      điều hướng thông minh trong môi trường động, học tăng cường sâu (DRL), SLAM, cảm biến LiDAR 
-      và điều khiển chuyển động. Tôi làm việc với cả mô phỏng (Gazebo) và robot thực.
-    </p>
-
-    <!-- RESEARCH -->
-    <h3 id="research">Hướng nghiên cứu</h3>
-    <ul>
-      <li>Autonomous Robots & Intelligent Navigation</li>
-      <li>SLAM, AMCL, Perception Systems</li>
-      <li>Deep Reinforcement Learning (TD3, SAC, PPO)</li>
-      <li>Sensor Fusion: LiDAR + IMU</li>
-      <li>Robot Motion Planning</li>
-    </ul>
-
-    <!-- PROJECTS -->
-    <h3 id="projects">Dự án tiêu biểu</h3>
-    <ul>
-      <li><strong>TD3-based Autonomous Navigation for AMR</strong> – điều hướng robot trong môi trường động không cần global planner.</li>
-      <li><strong>SLAM + DRL Integration</strong> – kết hợp slam_toolbox và TD3 trên robot thật.</li>
-      <li><strong>Local Goal Selector từ LiDAR</strong> – phân tích scan real-time và chọn local waypoint tối ưu.</li>
-      <li><strong>ROS Noetic AMR System</strong> – triển khai AMCL, move_base, mapping, teleop.</li>
-    </ul>
-
-    <!-- PUBLICATIONS -->
-    <h3 id="pubs">Công bố khoa học</h3>
-    <ul>
-      <li><strong>[2024]</strong> DRL-based Navigation in Dynamic Environments.</li>
-      <li><strong>[2023]</strong> Enhanced SLAM through Adaptive Sensor Fusion.</li>
-      <li><strong>[2022]</strong> Intelligent Obstacle Avoidance with LiDAR.</li>
-    </ul>
-
-    <!-- TEACHING -->
-    <h3 id="teaching">Giảng dạy</h3>
-    <ul>
-      <li>Robot Operating System (ROS)</li>
-      <li>Machine Learning trong Robot</li>
-      <li>Điều khiển Robot bằng Python/C++</li>
-      <li>Cảm biến và xử lý tín hiệu</li>
-    </ul>
-
-    <!-- CONTACT -->
-    <h3 id="contact">Liên hệ</h3>
-    <p>📧 Email: <a href="mailto:youremail@gmail.com">youremail@gmail.com</a></p>
-    <p>🌐 GitHub: <a href="https://github.com/White-Pici">github.com/White-Pici</a></p>
-    <p>🔗 LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
-
+    <h2>Chào mừng!</h2>
+    <p>Chọn mục trong Menu bên trái để xem nội dung.</p>
   </div>
 
 </div>
